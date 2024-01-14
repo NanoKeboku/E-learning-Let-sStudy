@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="beranda.css" />
+    <script
+      src="https://kit.fontawesome.com/60bfabd217.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Josefin+Sans:wght@300&family=Nanum+Gothic:wght@700&family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left" id="left">
+        <!-- -----------nav-left---------------- -->
+        <div class="logo">
+          <span><img src="logo.png" alt="logo" /></span>
+          <h1 class="toggle">
+            Let's <span style="padding-left: 10px;">Study</span>
+          </h1>
+        </div>
+        <nav>
+          <div onclick="nav(1)" class="nav-block beranda">
+            <div class="text-i">
+              <i class="fa-solid fa-house"></i>
+              <p class="toggle">Beranda</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(2)" class="nav-block kelas">
+            <div class="text-i">
+              <i class="fa-solid fa-book-open icon"></i>
+              <p class="toggle">Kelas</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(3)" class="nav-block materi">
+            <div class="text-i">
+              <i class="fa-solid fa-clipboard-list icon"></i>
+              <p class="toggle">Materi</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(4)" class="nav-block tugas">
+            <div class="text-i">
+              <i class="fa-solid fa-list-check icon"></i>
+              <p class="toggle">Tugas</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+        </nav>
+        <div class="keluar">
+          <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+          <p class="toggle">Keluar</p>
+        </div>
+      </div>
+
+      <!-- ----------- Right Side--------------- -->
+      <!-- Beranda -->
+
+      <div class="right">
+        <!-- navbar notif -->
+        <div class="nav-menu">
+          <div class="title">
+            <h1 id="demo">Beranda</h1>
+            <p><span>Rabu</span>, 6 Januari 2024</p>
+          </div>
+          <span class="bell" id="bell">
+            <i class="fa-regular fa-xl fa-bell" style="color: #000000;"></i>
+          </span>
+          <div class="notif-bar">
+            <div class="nav-notif">
+              <p class="text-notif">Notifikasi</p>
+            </div>
+          </div>
+        </div>
+        <!-- -------------Main Side Beranda------------------------ -->
+        <div class="main"  id="beranda">
+          <div class="hero">
+            <div class="content-hero">
+              <h1>Hello Alhambra!</h1>
+              <p>Every day is a chance to learn something new and grow.</p>
+            </div>
+            <img src="hero.png" alt="Study" />
+          </div>
+          <div class="main-card">
+            <div class="latest">
+              <p>Terakhir Dipelajari</p>
+            </div>
+            <div class="card-block">
+              <div onclick="kelasMateri(1)" class="card c1">
+                <img src="card1.png" />
+              </div>
+              <div onclick="kelasMateri(2)" class="card c2">
+                <img src="card2.png" />
+              </div>
+              <div onclick="kelasMateri(3)" class="card c3">
+                <img src="card3.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kelassssssssssssssss -->
+
+        <!-- -------------Main Side------------------------ -->
+        <div id="kelas">
+          <div class="simbol">
+            <p>Kelas Aktif</p>
+          </div>
+          <div id="ckelas">
+            <div id="ckelas">
+                <div onclick="kelasMateri(1)" class="kls">
+                  <img id="warna1" src="Tech Life Communication.png" alt="" />
+                  <h5>Communication</h5>
+                  <p>Monday, 08:00 am</p>
+                </div>
+
+              <div onclick="kelasMateri(2)" class="kls">
+                <img id="warna2" src="Moneyverse Home Office.png" alt="" />
+                <h5>Project Management</h5>
+                <p>Friday, 08:00 am</p>
+              </div>
+              <div onclick="kelasMateri(3)" class="kls">
+                <img id="warna3" src="Stuck at Home Brainstorming.png" alt="" />
+                <h5>Data Analytics</h5>
+                <p>Saturday, 08:00 am</p>
+              </div>
+              <div onclick="kelasMateri(4)" class="kls" id="cardContainer">
+                <img id="warna4" src="Cool Kids Study.png" alt="" />
+                <h5>Computer Science</h5>
+                <p>Monday, 08:00 am</p>
+              </div>
+            </div>
+
+
+            <div id="formContainer" class="form-container plus-kls">
+              <form onsubmit="addNewClass(event)">
+                <div class="input-kls">
+                  <div class="input-container">
+                    <label for="className">Class Name:</label>
+                    <input
+                      type="text"
+                      id="className"
+                      name="className"
+                      required
+                    />
+                  </div>
+                  <div class="input-container">
+                    <label for="classTime">Class Time:</label>
+                    <input
+                      type="text"
+                      id="classTime"
+                      name="classTime"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn-cls">Tambah</button>
+                </div>
+              </form>
+            </div>
+            <!-- <div class="new-class">awdwad</div> -->
+            <img class="plus" src="plus.png" alt="pluss" />
+          </div>
+        </div>
+
+        <!-- Materiiiiiiiiiiii -->
+        <div id="materi">
+          <div class="kotak">
+            <div class="kkiri">
+              <h1>Hi, Alhambra</h1>
+              <p>Ready to start your day with some pitch deck?</p>
+            </div>
+            <div class="kkanan">
+              <img src="The Little Things Working.png" alt="" />
+            </div>
+          </div>
+          <div class="overview">
+            <div class="text-war">
+              <p class="war">Ringkasan</p>
+            </div>
+            <div class="ckotakan">
+              <div id="w1" class="kotakan">
+                <div class="icon">
+                  <span>
+                    <i
+                      class="fa-solid fa-chart-line fa-xl icon-bar"
+                      style="color: #000000;"
+                    ></i>
+                  </span>
+                </div>
+                <div class="desc">
+                  <span class="cart">30%</span>
+                  <p>On Going</p>
+                </div>
+              </div>
+              <div id="w2" class="kotakan">
+                <div class="icon">
+                  <span>
+                    <i
+                      class="fa-solid fa-chart-line fa-xl icon-bar"
+                      style="color: #000000;"
+                    ></i>
+                  </span>
+                </div>
+                <div class="desc">
+                  <span class="cart" style="color: white;">20%</span>
+                  <p style="color: white;">Deadline</p>
+                </div>
+              </div>
+              <div id="w3" class="kotakan">
+                <div class="icon">
+                  <span>
+                    <i
+                      class="fa-solid fa-chart-line fa-xl icon-bar"
+                      style="color: #000000;"
+                    ></i>
+                  </span>
+                </div>
+                <div class="desc">
+                  <span class="cart">40%</span>
+                  <p>Success</p>
+                </div>
+              </div>
+              <div id="w4" class="kotakan">
+                <div class="icon">
+                  <span>
+                    <i
+                      class="fa-solid fa-chart-line fa-xl icon-bar"
+                      style="color: #000000;"
+                    ></i>
+                  </span>
+                </div>
+                <div class="desc">
+                  <span class="cart">10%</span>
+                  <p>Unprogress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-materi">
+            <div class="kbawah s1">
+              <div class="desc">
+                <h1>UI/UX Design</h1>
+                <p>Pak Murhadi</p>
+              </div>
+              <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+            </div>
+            <div class="kbawah s2">
+              <div class="desc">
+                <h1>Strutur Data</h1>
+                <p>Bu Dewi</p>
+              </div>
+              <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- TUGASSSSSSSSSSSSSSSSS -->
+        <div class="conta" id="tugas">
+          <div class="kr">
+            <div class="catas">
+              <div class="atas" id="hitam">
+                <a class="link-tugas hitam" onclick="tugas1(1)">All</a>
+              </div>
+              <div class="atas grey">
+                <a class="link-tugas hitam" onclick="tugas1(2)">Up Comming</a>
+              </div>
+              <div class="atas grey">
+                <a class="link-tugas hitam" onclick="tugas1(3)">Complete</a>
+              </div>
+            </div>
+            <div class="ckls">
+              <div class="klss tugas-1">
+                <div class="break">
+                  <div class="ksatuu">
+                    <p>01</p>
+                  </div>
+                  <div class="kdua">
+                    <p class="fsatuu">Communication</p>
+                    <p class="fduau">Speaking Easely</p>
+                  </div>
+                </div>
+                <div class="kdua">
+                  <p class="fduaau">Sunday, 8 Oktober 2023</p>
+                  <p class="fduaau">13.00 - 15.45</p>
+                </div>
+              </div>
+
+              <div class="klss tugas-1">
+                <div class="break">
+                  <div class="ksatuu">
+                    <p>02</p>
+                  </div>
+                  <div class="kdua">
+                    <p class="fsatuu">Javascript DOM</p>
+                    <p class="fduau">Web Dev</p>
+                  </div>
+                </div>
+                <div class="kdua">
+                  <p class="fduaau">Sunday, 12 Oktober 2023</p>
+                  <p class="fduaau">14.00 - 15.45</p>
+                </div>
+              </div>
+
+              <div class="klss tugas-1">
+                <div class="break">
+                  <div class="ksatuu">
+                    <p>03</p>
+                  </div>
+                  <div class="kdua">
+                    <p class="fsatuu">Public Speaking</p>
+                    <p class="fduau">Speaking Easely</p>
+                  </div>
+                </div>
+                <div class="kdua">
+                  <p class="fduaau">Sunday, 8 Oktober 2023</p>
+                  <p class="fduaau">08.00 - 10.45</p>
+                </div>
+              </div>
+
+              <div class="klss tugas-1">
+                <div class="break">
+                  <div class="ksatuu">
+                    <p>04</p>
+                  </div>
+                  <div class="kdua">
+                    <p class="fsatuu">UI/UX Design</p>
+                    <p class="fduau">Speaking Easely</p>
+                  </div>
+                </div>
+                <div class="kdua">
+                  <p class="fduaau">Friday, 10 Oktober 2023</p>
+                  <p class="fduaau">13.00 - 15.45</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--batas-->
+          <div class="knn">
+            <h1>December</h1>
+            <img src="tanggal.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- komunikasi -->
+    <div class="komunikasi">
+      <div class="judul-komunikasi">
+        <h1 id="demo-komunikasi">Communication</h1>
+        <p id="nama-dosen">Joko</p>
+      </div>
+      <div id="container-komunikasi">
+        <div id="kiri-komunikasi">
+          <div id="tugas-komunikasi">
+            <h3>Tugas Yang Harus diselesaikan</h3>
+          <p onclick="nav(4)" style="cursor: pointer; color: red;">Lihat Tugas</p>
+          </div>
+        </div>
+        <div id="kanan-tugas">
+            <div class="materi-komunikasi"><h3>UAS</h3></div>
+          
+            <div class="materi-komunikasi"><h3>Materi Pertemuan 3</h3></div>
+          
+            <div class="materi-komunikasi"><h3>Tugas</h3></div>
+          
+            <div class="materi-komunikasi"><h3>Materi Pertemuan 2</h3></div>
+          
+            <div class="materi-komunikasi"><h3>Materi Pertemuan 1</h3></div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- -------------------Javascript--------------------------------------------------------- -->
+    <script>
+
+
+      const tugasClass = document.querySelectorAll(".tugas-1");
+
+      function tugas1(par) {
+        let i = 0;
+        for (let i = 0; i < tugasClass.length; i++) {
+          if (par == "1") {
+            tugasClass[i].style.display = "flex";
+            tugasClass.classList.add(".hitam");
+          } else if (par == "2") {
+            tugasClass[0].style.display = "none";
+            tugasClass[i].style.display = "flex";
+          } else if (par == "3") {
+            tugasClass[i].style.display = "none";
+            tugasClass[0].style.display = "flex";
+          }
+        }
+      }
+
+      // right side
+      const beranda = document.querySelector("#beranda");
+      const kelas = document.querySelector("#kelas");
+      const materi = document.querySelector("#materi");
+      const tugas = document.querySelector("#tugas");
+
+      // button nav
+      const buttonBeranda = document.querySelector(".beranda");
+      const buttonKelas = document.querySelector(".kelas");
+      const buttonMateri = document.querySelector(".materi");
+      const buttonTugas = document.querySelector(".tugas");
+      const demoText = document.getElementById("demo");
+      let right = document.querySelector(".right")
+      let komunikasi = document.querySelector(".komunikasi")
+      let logout = document.querySelector(".keluar")
+
+      logout.addEventListener("click",function () {
+        window.location.href ="loginn.html";
+      })
+
+
+      // button right main
+      function nav(params) {
+        buttonBeranda.classList.toggle("blue");
+        if (params == "1") {
+          right.style.display="flex";
+          komunikasi.style.display="none";
+
+          beranda.style.display = "flex";
+          buttonBeranda.classList.add("blue");
+          demoText.textContent = "Beranda";
+          buttonKelas.classList.remove("blue");
+          kelas.style.display = "none";
+          buttonMateri.classList.remove("blue");
+          materi.style.display = "none";
+          tugas.style.display = "none";
+          buttonTugas.classList.remove("blue");
+
+        } else if (params == "2") {
+          right.style.display="flex";
+          komunikasi.style.display="none";
+
+          demoText.textContent = "Kelas";
+          kelas.style.display = "flex";
+          buttonKelas.classList.add("blue");
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+          materi.style.display = "none";
+          buttonMateri.classList.remove("blue");
+          tugas.style.display = "none";
+          buttonTugas.classList.remove("blue");
+        } else if (params == "3") {
+          right.style.display="flex";
+          komunikasi.style.display="none";
+
+          demoText.textContent = "Materi";
+          materi.style.display = "flex";
+          buttonMateri.classList.add("blue");
+          kelas.style.display = "none";
+          buttonKelas.classList.remove("blue");
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+          tugas.style.display = "none";
+          buttonTugas.classList.remove("blue");
+        } else if (params == "4") {
+          right.style.display="flex";
+          komunikasi.style.display="none";
+
+          demoText.textContent = "Tugas";
+          tugas.style.display = "flex";
+          buttonTugas.classList.add("blue");
+          materi.style.display = "none";
+          buttonMateri.classList.remove("blue");
+          kelas.style.display = "none";
+          buttonKelas.classList.remove("blue");
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+        }
+      }
+      nav();
+
+      function addNewClass(event) {
+        event.preventDefault();
+        var name = document.getElementById("className");
+        var time = document.getElementById("classTime");
+
+        // ambil data
+        let num= 4;
+        // buat elemen card baru
+        var newCard = document.createElement("div");
+        newCard.className = "kls";
+        newCard.innerHTML = `
+            <img id="warna1" onclick="kelasMateri(${num +=1})" src="Cool Kids Study.png" alt="" />
+            <h5>${name.value}</h5>
+            <p>${time.value}</p>
+        `;
+
+        var kls = document.querySelector(".kls");
+        kls.addEventListener("click", function () {
+          window.location.href = "Communication.html";
+        });
+
+       
+
+        // nambah elemen card baru ke dalam container
+        var cardContainer = document.getElementById("cardContainer");
+        cardContainer.parentNode.insertBefore(
+          newCard,
+          cardContainer.nextSibling
+        );
+
+        // reset form
+        event.target.reset();
+      }
+
+
+
+
+
+
+      var className = document.getElementById("className");
+      var classTime = document.getElementById("classTime").value;
+
+      const judulKelas = document.getElementById("demo-komunikasi")
+      const namaDosen = document.getElementById("nama-dosen")
+      function kelasMateri(numb) {
+        if (numb == "1") {
+          komunikasi.style.display="flex";
+          right.style.display="none";
+          judulKelas.textContent="Comunication";
+          namaDosen.textContent="Joko";
+          
+          nav();
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+        buttonKelas.classList.add("blue");
+        }else if(numb == "2"){
+          komunikasi.style.display="flex";
+          right.style.display="none";
+          judulKelas.textContent="Project Management";
+          namaDosen.textContent="Murhadi";
+          nav();
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+        buttonKelas.classList.add("blue");
+        }else if(numb == "3"){
+          komunikasi.style.display="flex";
+          right.style.display="none";
+          judulKelas.textContent="Data Analystics";
+          namaDosen.textContent="Ike";
+          nav();
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+        buttonKelas.classList.add("blue");
+        }else if(numb == "4"){
+          komunikasi.style.display="flex";
+          right.style.display="none";
+          judulKelas.textContent="Computer Science";
+          namaDosen.textContent="Ike";
+          nav();
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+        buttonKelas.classList.add("blue");
+        }else if(numb >= 4){
+          komunikasi.style.display="flex";
+          right.style.display="none";
+          addNewClass();
+          judulKelas.textContent = `${name.vaue }`;
+          namaDosen.textContent="Ike";
+          nav();
+          beranda.style.display = "none";
+          buttonBeranda.classList.remove("blue");
+          buttonKelas.classList.add("blue");
+      }else{
+          right.style.display="none";      
+
+        }
+      }
+
+    
+
+     
+      function toggleFormVisibility() {
+        var formContainer = document.getElementById("formContainer");
+        formContainer.style.display =
+          formContainer.style.display === "none" ? "block" : "none";
+      }
+
+     
+      // notification
+      const bell = document.getElementById("bell");
+      let notifBar = document.querySelector(".notif-bar");
+      bell.addEventListener("click", function () {
+        notifBar.classList.toggle("on");
+      });
+
+      let arrow = document.getElementById("arrow");
+
+      document.getElementById("left").onmouseenter = function () {
+        mouseEnter();
+      };
+      document.getElementById("left").onmouseleave = function () {
+        mouseLeave();
+      };
+
+      // Navigation Enter
+      function mouseEnter() {
+        document.getElementById("arrow").style.display = "flex";
+        let tgle = document.querySelectorAll(".toggle");
+        var length = tgle.length;
+        for (let index = 0; index < length; index++) {
+          tgle[index].style.display = "flex";
+        }
+
+        let navBlock = document.querySelectorAll(".nav-block");
+        let length2 = navBlock.length;
+        for (let i = 0; i < length2; i++) {
+          navBlock[i].style.width = "200px";
+        }
+      }
+      // Navigation Leave
+      function mouseLeave() {
+        document.getElementById("arrow").style.display = "none";
+        let tgle = document.querySelectorAll(".toggle");
+        var index = 0,
+          length = tgle.length;
+        for (; index < length; index++) {
+          tgle[index].style.display = "none";
+        }
+
+        let navBlock = document.querySelectorAll(".nav-block");
+        let length2 = navBlock.length;
+        for (let i = 0; i < length2; i++) {
+          navBlock[i].style.width = "auto";
+        }
+      }
+
+      const plusClass = document.querySelector(".plus-kls");
+      const btnPlusClass = document.querySelector(".plus");
+      btnPlusClass.addEventListener("click", function () {
+        plusClass.classList.toggle("tambah");
+      });
+    </script>
+  </body>
+</html>

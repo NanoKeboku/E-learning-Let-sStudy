@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+}
+
+.right {
+  background-color: rgba(132, 188, 255, 0.47);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.logo-login {
+  position: relative;
+  margin-top: 30px;
+}
+
+.welcome {
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.with-google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 378px;
+  height: 51px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 35px;
+}
+
+.logo-google {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+
+.with-google p {
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  position: relative;
+  padding-left: 65px;
+}
+
+.line-acc {
+  display: flex;
+  width: auto;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.line-acc p {
+  padding: 0 15px;
+  color: #959595;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.line-one,
+.line-two {
+  width: 96px;
+  height: 1px;
+  background: #c7c7c7;
+}
+
+.input-full-name,
+.input-email,
+.input-pass {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form label {
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.input-full-name input,
+.input-email input,
+.input-pass input {
+  width: 378px;
+  height: 50px;
+  flex-shrink: 0;
+  border: 1px solid #cec9c9;
+  background: #fff;
+  padding-left: 10px;
+}
+
+.input-full-name {
+  margin-top: 17px;
+}
+
+.input-email {
+  margin-top: 17px;
+}
+
+.input-pass {
+  margin-top: 17px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+  justify-content: space-between;
+  width: 378px;
+}
+
+.check label {
+  color: #525252;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.check input {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border: 1px solid #afafaf;
+  background: #fff;
+}
+
+.check p {
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.check p a {
+  color: #ff5353;
+}
+
+#login {
+  width: 388px;
+  height: 45px;
+  flex-shrink: 0;
+  background: #84bcff;
+  border: none;
+  margin-top: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+#signup {
+  width: 388px;
+  height: 45px;
+  flex-shrink: 0;
+  background: #84bcff;
+  border: none;
+  margin-top: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.white-space {
+  width: 378px;
+  height: 45px;
+  margin-top: 27px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #c7c7c7;
+}
+
+.white-space p {
+  color: #a3a3a3;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.white-space a {
+  color: #ff5353;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  padding-right: 80px;
+}
+
+.right img {
+  width: 509px;
+  height: 497px;
+  flex-shrink: 0;
+  position: relative;
+  top: 200px;
+  left: 200px;
+}

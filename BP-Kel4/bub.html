@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antrian</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      #nomorAntrian {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #dd378a;
+      }
+      #stopButton {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="mulaiAntrian()">Mulai Antrian</button>
+    <p id="nomorAntrian"></p>
+    <button id="stopButton" onclick="stopAntrian()">Stop Antrian</button>
+
+    <script>
+      let intervalId;
+
+      function mulaiAntrian() {
+        let nomorAntrian = 0;
+
+        function tampilkanNomorAntrian() {
+          if (nomorAntrian <= 5) {
+            document.getElementById("nomorAntrian").innerText =
+              "Nomor Antrian: " + nomorAntrian;
+
+            nomorAntrian++;
+
+            intervalId = setTimeout(tampilkanNomorAntrian, 10000); // 2 detik dalam milidetik
+          } else {
+            nomorAntrian = 0; // Kembali ke nomor antrian 0 setelah mencapai 100
+            tampilkanNomorAntrian(); // Mulai kembali antrian
+          }
+        }
+
+        tampilkanNomorAntrian();
+      }
+
+      function stopAntrian() {
+        clearTimeout(intervalId);
+        document.getElementById("nomorAntrian").innerText =
+          "Antrian dihentikan";
+      }
+    </script>
+  </body>
+</html>

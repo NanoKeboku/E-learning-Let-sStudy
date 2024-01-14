@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="loginn.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="logo-login">
+          <img src="logo-ls.png" alt="let's study" />
+        </div>
+        <h1 class="welcome">Welcome</h1>
+        <div class="input-full-name form">
+          <label for="fname">Full Name</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+        <div class="input-email form">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="input-pass form">
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button onclick="submit()" id="signup">Sign Up</button>
+        <div class="line-acc">
+          <div class="line-one"></div>
+          <p>OR SIGNUP WITH EMAIL</p>
+          <div class="line-two"></div>
+        </div>
+        <div class="with-google">
+          <img class="logo-google" src="google.png" alt="google" srcset="" />
+          <p>Sign up with Google</p>
+        </div>
+        <div class="white-space">
+          <p>Already have an account?</p>
+          <a href="loginn.html">Log In</a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="right.png" alt="study" />
+      </div>
+    </div>
+
+    <script>
+      const fname = document.getElementById("fname");
+      const email = document.getElementById("email");
+      const pass = document.getElementById("pass");
+
+      function submit() {
+        if (email.value == "kelompok4@gmail.com" || pass.value == "123") {
+          alert("Anda berhasil daftar, silahkan login");
+          window.location.href = "beranda.html";
+        } else {
+          alert("email sudah terdaftar");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

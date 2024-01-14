@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="kelas.css" />
+    <script
+      src="https://kit.fontawesome.com/60bfabd217.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Josefin+Sans:wght@300&family=Nanum+Gothic:wght@700&family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left" id="left">
+        <!-- -----------nav-left---------------- -->
+        <div class="logo">
+          <span><img src="logo.png" alt="logo" /></span>
+          <h1 class="toggle">
+            Let's <span style="padding-left: 10px;">Study</span>
+          </h1>
+        </div>
+        <nav>
+          <div onclick="nav(1)" class="nav-block beranda">
+            <div class="text-i">
+              <i class="fa-solid fa-house"></i>
+              <p class="toggle">Beranda</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(2)" class="nav-block kelas">
+            <div class="text-i">
+              <i class="fa-solid fa-book-open icon"></i>
+              <p class="toggle">Kelas</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(3)" class="nav-block materi">
+            <div class="text-i">
+              <i class="fa-solid fa-clipboard-list icon"></i>
+              <p class="toggle">Materi</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+          <div onclick="nav(4)" class="nav-block tugas">
+            <div class="text-i">
+              <i class="fa-solid fa-list-check icon"></i>
+              <p class="toggle">Tugas</p>
+            </div>
+            <i
+              class="fa-solid fa-2xl fa-chevron-right arrow toggle"
+              id="arrow"
+              style="color: #ffffff;"
+            ></i>
+          </div>
+        </nav>
+        <div class="keluar">
+          <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+          <p class="toggle">Keluar</p>
+        </div>
+      </div>
+
+      <!-- ----------- Right Side--------------- -->
+      <div class="right">
+        <!-- navbar notif -->
+        <div class="nav-menu">
+          <div class="title">
+            <h1>Kelas</h1>
+            <p><span>Rabu</span>, 6 Januari 2024</p>
+          </div>
+          <span class="bell" id="bell">
+            <i class="fa-regular fa-xl fa-bell" style="color: #000000;"></i>
+          </span>
+          <div class="notif-bar">
+            <div class="nav-notif">
+              <p class="text-notif">Notifikasi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------Main Side------------------------ -->
+        <div class="simbol">
+          <p>Kelas Aktif</p>
+        </div>
+        <div id="ckelas">
+          <div id="ckelas">
+            <a
+              href="file:///C:/Users/andri/Documents/visual%20studio%20code/UAS/part2/kelas%20part%202/Communication.html"
+            >
+              <div onclick="kelas(1)" class="kls">
+                <img id="warna1" src="Tech Life Communication.png" alt="" />
+                <h5>Communication</h5>
+                <p>Monday, 08:00 am</p>
+              </div>
+            </a>
+
+            <div onclick="kelas(2)" class="kls">
+              <img id="warna2" src="Moneyverse Home Office.png" alt="" />
+              <h5>Project Management</h5>
+              <p>Friday, 08:00 am</p>
+            </div>
+            <div onclick="kelas(3)" class="kls">
+              <img id="warna3" src="Stuck at Home Brainstorming.png" alt="" />
+              <h5>Data Analytics</h5>
+              <p>Saturday, 08:00 am</p>
+            </div>
+            <div onclick="kelas(4)" class="kls">
+              <img id="warna4" src="Cool Kids Study.png" alt="" />
+              <h5>Computer Science</h5>
+              <p>Monday, 08:00 am</p>
+            </div>
+          </div>
+          <img class="plus" src="plus.png" alt="pluss" />
+        </div>
+        <div class="plus-kls">
+          <div class="input-kls">
+            <h1>Tambah Kelas</h1>
+            <p>Nama kelas :</p>
+            <input class="input-text" type="text" />
+            <p>Code</p>
+            <input class="input-text" type="text" />
+            <button>Tambah</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------Javascript--------------------------------------------------------- -->
+    <script>
+      const plusKlas = document.querySelector("plus-kls");
+
+      const bell = document.getElementById("bell");
+      let notifBar = document.querySelector(".notif-bar");
+      bell.addEventListener("click", function () {
+        notifBar.classList.toggle("on");
+      });
+
+      let arrow = document.getElementById("arrow");
+
+      document.getElementById("left").onmouseenter = function () {
+        mouseEnter();
+      };
+      document.getElementById("left").onmouseleave = function () {
+        mouseLeave();
+      };
+
+      function mouseEnter() {
+        document.getElementById("arrow").style.display = "flex";
+        let tgle = document.querySelectorAll(".toggle");
+        var length = tgle.length;
+        for (let index = 0; index < length; index++) {
+          tgle[index].style.display = "flex";
+        }
+
+        let navBlock = document.querySelectorAll(".nav-block");
+        let length2 = navBlock.length;
+        for (let i = 0; i < length2; i++) {
+          navBlock[i].style.width = "200px";
+        }
+      }
+      function mouseLeave() {
+        document.getElementById("arrow").style.display = "none";
+        let tgle = document.querySelectorAll(".toggle");
+        var index = 0,
+          length = tgle.length;
+        for (; index < length; index++) {
+          tgle[index].style.display = "none";
+        }
+
+        let navBlock = document.querySelectorAll(".nav-block");
+        let length2 = navBlock.length;
+        for (let i = 0; i < length2; i++) {
+          navBlock[i].style.width = "auto";
+        }
+      }
+
+      function nav(params) {
+        if (params == "1") {
+          window.location.href = "beranda.html";
+        } else if (params == "2") {
+          window.location.href = "kelas.html";
+        } else if (params == "3") {
+          window.location.href = "materi.html";
+        } else if (params == "4") {
+          window.location.href = "tugas.html";
+        }
+      }
+    </script>
+  </body>
+</html>

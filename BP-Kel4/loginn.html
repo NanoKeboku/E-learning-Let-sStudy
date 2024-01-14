@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="loginn.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="logo-login">
+        <img src="logo-ls.png" alt="let's study" />
+      </div>
+      <h1 class="welcome">Welcome</h1>
+      <div class="with-google">
+        <img class="logo-google" src="google.png" alt="google" srcset="" />
+        <p>Log in with Google</p>
+      </div>
+      <div class="line-acc">
+        <div class="line-one"></div>
+        <p>OR LOGIN WITH EMAIL</p>
+        <div class="line-two"></div>
+      </div>
+      <div class="input-email form">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Email Address" required />
+      </div>
+      <div class="input-pass form">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" placeholder="Password" required />
+      </div>
+      <div class="check">
+        <div class="label-chek">
+          <input type="checkbox" name="checkbox" id="check" />
+          <label for="checkbox">Keep me logged in</label>
+        </div>
+        <p><a href="">Forget your password?</a></p>
+      </div>
+      <button onclick="submit()" id="login">Log in</button>
+      <div class="white-space">
+        <p>Don’t have an account?</p>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+    <div class="right">
+      <img src="right.png" alt="study" />
+    </div>
+  </div>
+
+  <script>
+    const email = document.getElementById("email");
+    const pass = document.getElementById("pass");
+
+    function submit() {
+      if (email.value == "kelompok4@gmail.com" && pass.value == "123") {
+        window.location.href = "beranda.html";
+      } else {
+        alert("email atau kata sandi mungkin salah");
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
